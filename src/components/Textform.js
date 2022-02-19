@@ -11,6 +11,9 @@ export default function Textform(props) {
     const handleDownClick = () => {
         setText(text.toLowerCase())
     }
+    const handleClearClick = () => {
+        setText('')
+    }
     const [text, setText] = useState('');
   return (
     <>
@@ -20,7 +23,8 @@ export default function Textform(props) {
                 <textarea className="form-control" id="myBox" rows="8" onChange={handleOnChange} value={text}></textarea>
             </div>
             <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
-            <button className="btn btn-primary mx-2" onClick={handleDownClick}>Convert to Lowercase</button>
+            <button className="btn btn-primary mx-1" onClick={handleDownClick}>Convert to Lowercase</button>
+            <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
         </div> 
         <div className="container my-3">
             <h1>Your Word summary</h1>
