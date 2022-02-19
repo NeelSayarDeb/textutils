@@ -8,8 +8,7 @@ import Textform from './components/Textform';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState('light')
